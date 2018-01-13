@@ -11,5 +11,6 @@
         </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
         <script src="js/vue.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
