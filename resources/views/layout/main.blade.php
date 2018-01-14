@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>lara.vue learning project</title>
-        <style>body{padding-top:40px;height:100vh;background:#efefef}</style>
+        <style>section.section{background:#efefef}</style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
     </head>
     <body>
