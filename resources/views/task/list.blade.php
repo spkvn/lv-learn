@@ -18,7 +18,7 @@
             </div>
 
             <div class="control">
-                <button class="button is-primary" :disabled="form.errors.any()">Create</button>
+                <button class="button is-primary" :class="{'is-loading' : form.working}" :disabled="form.errors.any()">Create</button>
             </div>
         </form>
         <!-- Tasks -->

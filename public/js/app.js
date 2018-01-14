@@ -28,6 +28,7 @@ class Errors{
 class Form {
     constructor(data){
         this.originalData = data;
+        this.working  = false; 
         for(let field in data){
             this[field] = data[field];
         }
@@ -47,16 +48,19 @@ class Form {
         return data;
     }
     submit(method, endpoint){
+        this.working = true;
         axios[method](endpoint, this.data())
              .then(this.onSuccess.bind(this))
              .catch(this.onFail.bind(this));
     }
     onSuccess(response){
+        this.working = false; 
         alert(response.data.message);
         this.errors.clear();
         this.reset();
     }
     onFail(error){
+        this.working = false; 
         console.log(error.response.data.errors);
         this.errors.record(error.response.data.errors);
     }
